@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title>Studentenverwaltung</title>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="data:text/css;charset=utf-8," data-href="../dist/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="style.css">
+<script src="css.js"></script>
+
+</head>
+
+<body>
+
+  <header class="container">
+      <div class="row">
+        <h1 class="col-sm-8">Studentenverwaltung</h1>
+
+        <nav class="navbar navbar-inverse navbar-fixed-right">
+          <div class="container-fluid">
+           <div class="navbar-collapse collapse">
+           <ul class="nav navbar-nav">
+             <li ><a href="/search.php">Such Bereich</a></li>
+             <li ><a href="/admin.php">Admin Bereich</a></li>
+             <li><a href="#logout">Logout</a></li>
+
+           </ul>
+         </div><!--/.nav-collapse -->
+       </div>
+     </nav>
+      </div>
+    </header>
+
+
+    <section class="container">
+      <div class="row">
+          <div class="col-xs-3 "> </div>
+          <div class="col-xs-4">   <h2 >Login </h2> </div>
+            <div class="col-xs-4"> <h3> Jetzt Registrieren: </h3>
+            </div>
+        </div>
+      <div class="row">
+        <div class="col-xs-3 "> hier die suchfelder untereinander   </div>
+        <div class="col-xs-8 ">
+          <div class="modal-body">
+                     <div class="row">
+                         <div class="col-xs-5">
+                             <div class="well">
+                                 <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                                     <div class="form-group">
+                                         <label for="username" class="control-label">Benutzername</label>
+                                         <input type="text" class="form-control" id="username" name="username" value="" required="" title="Bitte geben Sie ihren Benutzernamen ein" placeholder="Benutzername">
+                                         <span class="help-block"></span>
+                                     </div>
+                                     <div class="form-group">
+                                         <label for="password" class="control-label">Passwort</label>
+                                         <input type="password" class="form-control" id="password" name="password" value="" required="" title="Bitte geben Sie ihr Passwort ein">
+                                         <span class="help-block"></span>
+                                     </div>
+                                     <div id="loginErrorMsg" class="alert alert-error hide">Falscher Benutzername oder Passwort</div>
+
+                                     <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+                                 </form>
+                             </div>
+                         </div>
+                          <div class="col-xs-1">
+                            <hr class="divider-vertical">
+                          </div>
+                          <div class="col-xs-5">
+                              <div class="well">
+                                  <form id="registerForm" method="POST" action="/register/" novalidate="novalidate">
+                                    <div class="form-group">
+                                        <label for="email" class="control-label">E-Mail</label>
+                                        <input type="email" class="form-control" id="email" name="email" value="" required="" title="Bitte geben Sie Ihre E-Mail Adresse ein" placeholder="123@gmail.com">
+
+                                    </div>
+
+                                      <div class="form-group">
+                                          <label for="username" class="control-label">Benutzername</label>
+                                          <input type="text" class="form-control" id="username" name="username" value="" required="" title="Bitte geben Sie einen Benutzernamen ein" placeholder="Benutzername">
+                                      </div>
+
+                                      <div id="registerErrorMsg" class="alert alert-error hide">Dieser Benutzer existiert bereits</div>
+
+                                      <button type="submit" class="btn btn-primary btn-block">Registrieren</button>
+
+                                  </form>
+                              </div>
+                          </div>
+               </div>
+    </div>
+
+    </section>
+
+
+
+
+    <footer class="container">
+      <div class="row">
+        <p class="col-sm-12">&copy; 2016 Daten und Webtechniken | Tabea Sims | Edith Hansch</p>
+
+      </div>
+    </footer>
+
+</body>
+
+</html>
